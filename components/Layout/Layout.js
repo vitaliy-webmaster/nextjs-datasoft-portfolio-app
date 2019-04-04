@@ -1,24 +1,17 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import Header from "../Header";
+import Footer from "../Footer";
 
 class Layout extends Component {
 	render() {
 		return (
 			<div>
-				<header>
-					<Link href="/">
-						<a>Home</a>
-					</Link>
-					<Link href="/about">
-						<a>About</a>
-					</Link>
-				</header>
+				<Header />
 				<main>
 					{this.props.children}
 				</main>
-				<footer>
-					&copy; 2019 All rights reserved.
-				</footer>
+				<Footer />
 			</div>
 		);
 	}

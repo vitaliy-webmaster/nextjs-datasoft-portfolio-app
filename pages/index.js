@@ -1,13 +1,142 @@
 import React, { Component } from "react";
-import "../static/styles/main.scss";
-import "../static/styles/style.css";
+import Link from "next/link";
+import fetch from "isomorphic-unfetch";
+import PortfolioSection from "../components/PortfolioSection";
+import config from "../config";
 
 class Index extends Component {
+	static async getInitialProps() {
+		const { HOST_URI } = config;
+		let data;
+		try {
+			const response = await fetch(`${HOST_URI}/api/portfolio-items`);
+			data = await response.json();
+		} catch (err) {
+			console.log("Fetching data error");
+			data = [];
+		}
+		return { data };
+	}
+
 	render() {
+		console.log(this.props.data);
 		return (
-			<div>
-				Index Page
-			</div>
+			<React.Fragment>
+				<div className="container">
+					<div className="agency">
+						<div className="agency-inner col-md-offset-1 col-md-4 col-sm-12">
+							<div className="row">
+								<img className="img-thumbnail" src="/static/images/my_photo.jpg"
+										 alt="My Photo" />
+							</div>
+						</div>
+						<div className="history-cite-box col-md-offset-1 col-md-5 col-sm-12">
+							<div className="row">
+								<div className="section-title">
+									<span>Обо мне</span>
+								</div>
+								<p>
+									Приветствую!
+									<br /> Меня зовут Виталий, и я более 4 лет занимаюсь Full-Stack разработкой для WEB. <br />На
+									этой странице вы сможете ознакомиться с моими навыками и портфолио.
+								</p>
+								<Link href="/about">
+									<a className="btn grey animsition-link"><span>Читать далее<span className="" /></span></a>
+								</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section className="services">
+					<div className="container">
+						<div className="row">
+							<div className="section-title">
+								<span className="white">Услуги</span>
+								<p className="white">Предлагаю услуги web-разработчика (Full-Stack) по следующим направлениям.</p>
+							</div>
+						</div>
+						<div className="services-bg row">
+							<div className="services-bg-overlay" />
+							<div className="col-md-12 col-md-offset-0 col-lg-8 col-sm-6 col-sm-offset-3 services-left wow fadeInUp">
+								<div className="row">
+									<div className="category-bg col-md-6 col-sm-12">
+										<div className="row">
+											<i className="icon ion-ios-infinite-outline" />
+											<span className="open-sans-text uppercase service-title">Aдаптивная вёрстка</span>
+											<ul>
+												<li>HTML5, CSS3, JQuery</li>
+												<li>Кроссбраузерность</li>
+												<li>Все размеры экранов</li>
+												<li>Flexbox, CSS3 Mediaqueries</li>
+												<li>Bootstrap 4 (3)</li>
+												<li>CSS Transitions & Animations</li>
+												<li>Разработка тем WordPress</li>
+												<li>Подключ. аналит. сервисов</li>
+											</ul>
+										</div>
+									</div>
+									<div className="category-bg col-md-6 col-sm-12">
+										<div className="row">
+											<i className="icon ion-ios-shuffle" />
+											<span className="open-sans-text uppercase service-title">ReactJS разработка</span>
+											<ul>
+												<li>Front-End на ReactJS</li>
+												<li>Redux, Redux-Thunk, Redux-Saga</li>
+												<li>Server-side rendering (NextJS)</li>
+												<li>React-Router, Redux Form и др.</li>
+												<li>CSS-in-JS, SASS, Animations</li>
+												<li>Unit Testing</li>
+												<li>ES6-ES8, REST, Firebase и др.</li>
+												<li>Подключ. дополн. библиотек</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<div className="category-bg col-md-6 col-sm-12">
+										<div className="row">
+											<i className="icon ion-ios-cart-outline" />
+											<span className="open-sans-text uppercase service-title">NodeJS разработка</span>
+											<ul>
+												<li>Back-End на NodeJS</li>
+												<li>ExpressJS, Passport, и др.</li>
+												<li>Rest сервисы и GraphQL</li>
+												<li>Client Auth с cookies и JWT</li>
+												<li>MongoDB, PostgreSQL, Oracle</li>
+												<li>Real-Time apps c WebSockets</li>
+											</ul>
+										</div>
+									</div>
+									<div className="category-bg col-md-6 col-sm-12">
+										<div className="row">
+											<i className="icon ion-ios-settings" />
+											<span className="open-sans-text uppercase service-title">Дополнительные навыки</span>
+											<ul>
+												<li>Object Oriented Programming</li>
+												<li>Angular 2+ на базовом уровне</li>
+												<li>Git, Webpack, Babel и др.</li>
+												<li>English upper-intermediate</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div className="col-lg-4 visible-lg services-right wow fadeInUp">
+								<div className="row">
+									<img src="/static/images/web-development-medium.png"
+											 alt="Services Image" />
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<PortfolioSection itemsData={this.props.data} />
+
+			</React.Fragment>
 		);
 	}
 }

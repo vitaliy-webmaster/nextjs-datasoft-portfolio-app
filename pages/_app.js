@@ -1,9 +1,23 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
+import Router from "next/router";
+import NProgress from "nprogress";
 
-import "../static/styles/main.scss";
+import "../static/styles/sass/main.scss";
 import Layout from "../components/Layout";
+
+Router.onRouteChangeStart = (url) => {
+	NProgress.start();
+};
+
+Router.onRouteChangeComplete = () => {
+	NProgress.done();
+};
+
+Router.onRouteChangeError = () => {
+	NProgress.done();
+};
 
 class MyApp extends App {
 	static async getInitialProps({ Component, ctx }) {
@@ -22,7 +36,8 @@ class MyApp extends App {
 		return (
 			<Container>
 				<Head>
-					<title>Datasoft Studio</title>
+					<title>Datasoft Portfolio</title>
+					<link rel="stylesheet" href="/static/styles/vendor/nprogress.css" />
 				</Head>
 				<Layout>
 					<Component {...pageProps} />

@@ -1,0 +1,12 @@
+@import './fonts';
+@import './header';
+@import './index';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:active, a:hover, a:focus {
+  color: rgb(173, 169, 163);
+}
