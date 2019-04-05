@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { withRouter } from "next/router";
-import Router from "next/router";
-import NProgress from "nprogress";
 
 class Vegas extends Component {
 
 	state = {
-		heroHeight: 750
+		heroHeight: (this.props.router.pathname === "/") ? 750 : 480
 	};
 
 
@@ -25,7 +23,6 @@ class Vegas extends Component {
 	};
 
 	componentDidMount() {
-
 		this.setHeroHeight();
 		window.addEventListener("resize", this.setHeroHeight.bind(this));
 
@@ -42,11 +39,18 @@ class Vegas extends Component {
 		});
 	}
 
+	componentDidUpdate(prevProps, prevState) {
+		if (prevProps.router.pathname !== this.props.router.pathname) {
+			this.setHeroHeight();
+		}
+	}
+
 	render() {
 		return (
-			<div className="site-hero vegas_bg" style={{ height: this.state.heroHeight }}>
+			<div className={`site-hero vegas_bg ${this.state.heroHeight === 480 ? "with-margin-top" : ""}`}
+					 style={{ height: this.state.heroHeight }}>
 				<div className="h1">
-					WEB-программирование<br /> <span>Профессиональная вёрстка и Full-Stack разработка</span>
+					WEB-программирование<br /> <span>Профессиональная Full-Stack разработка на NodeJS и React</span>
 				</div>
 			</div>
 		);

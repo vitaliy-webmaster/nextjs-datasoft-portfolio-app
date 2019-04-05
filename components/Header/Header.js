@@ -29,9 +29,6 @@ class Header extends Component {
 									<li id="menu-item-59"
 											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
 										<Link href="/portfolio"><a>Портфолио</a></Link></li>
-									<li id="menu-item-58"
-											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
-										<Link href="/blog"><a>Блог</a></Link></li>
 									<li id="menu-item-57"
 											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
 										<Link href="/contact"><a>Контакты</a></Link></li>

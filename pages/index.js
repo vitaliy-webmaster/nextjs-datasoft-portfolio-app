@@ -19,7 +19,6 @@ class Index extends Component {
 	}
 
 	render() {
-		console.log(this.props.data);
 		return (
 			<React.Fragment>
 				<div className="container">

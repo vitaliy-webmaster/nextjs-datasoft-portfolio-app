@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const PortfolioItem = require("./models/PortfolioItem");
 const expressValidator = require("express-validator");
 
+require("dotenv").config();
 const PORT = parseInt(process.env.PORT, 10) || 7000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -44,7 +45,7 @@ app.prepare().then(() => {
 		req.checkBody("message", "Сообщение должно иметь не менее 10 символов").isLength({ min: 10 });
 
 		const errors = req.validationErrors();
-		console.log(errors);
+		// console.log(errors);
 
 		if (errors) {
 			return res.status(400).json({ type: "message", status: "error", payload: errors });
@@ -66,13 +67,14 @@ app.prepare().then(() => {
 	});
 
 	server.post("/api/portfolio-items", (req, res) => {
-		const { pass, category, title, portfolioUrl, websiteUrl, previewImg, fullscreenImgs, description, endDate } = req.body;
+		const { pass, category, priority, title, portfolioUrl, websiteUrl, previewImg, fullscreenImgs, description, endDate } = req.body;
 		if (pass !== "passneverforget") {
 			return res.status(400).json({ type: "add-portfolio-item", status: "error", payload: "wrong credentials" });
 		}
 		const item = new PortfolioItem({
 			pass,
 			category,
+			priority,
 			title,
 			portfolioUrl,
 			websiteUrl,

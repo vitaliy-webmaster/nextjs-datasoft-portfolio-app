@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const portfolioItemSchema = new Schema({
 	category: String,
+	priority: {
+		type: Number,
+		default: 10
+	},
 	title: {
 		type: String,
 		required: true

@@ -44,8 +44,6 @@ class Footer extends Component {
 											<Link href="/services"><a className="animsition-link">Услуги</a></Link></li>
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
 											<Link href="/portfolio"><a className="animsition-link">Портфолио</a></Link></li>
-										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
-											<Link href="/blog"><a className="animsition-link">Блог</a></Link></li>
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
 											<Link href="/contact"><a className="animsition-link">Контакты</a></Link></li>
 									</ul>
