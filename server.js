@@ -1,6 +1,8 @@
 const express = require("express");
 const next = require("next");
 const mongoose = require("mongoose");
+const helmet = require("helmet");
+const compression = require("compression");
 const PortfolioItem = require("./models/PortfolioItem");
 const expressValidator = require("express-validator");
 
@@ -27,6 +29,11 @@ connectMongoDB();
 
 app.prepare().then(() => {
 	const server = express();
+
+	if (!dev) {
+		server.use(helmet());
+		server.use(compression());
+	}
 
 	server.use(express.json());
 	server.use(expressValidator());
@@ -94,7 +101,7 @@ app.prepare().then(() => {
 	});
 
 	server.get("/api/portfolio-items", (req, res) => {
-		PortfolioItem.find({}, (err, result) => {
+		PortfolioItem.find({}).sort("-priority").exec((err, result) => {
 			if (err) return res.status(400).json({
 				type: "get-portfolio-items",
 				status: "error",

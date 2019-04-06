@@ -19,6 +19,7 @@ class MyDocument extends Document {
 				<link href="/static/styles/vendor/bootstrap-theme.min.css" rel="stylesheet" />
 				<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;subset=cyrillic"
 							rel="stylesheet" />
+				<link rel="stylesheet" href="/static/styles/vendor/nprogress.css" />
 				<link href="/static/styles/vendor/vegas.min.css" rel="stylesheet" />
 				<link href="/static/styles/style.css" rel="stylesheet" />
 				<script src="/static/js/jquery-1.12.4.min.js" type="text/javascript" />

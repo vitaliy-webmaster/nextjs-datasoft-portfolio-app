@@ -16,6 +16,10 @@ class PortfolioItem extends Component {
 		return { data: data.payload };
 	}
 
+	// componentDidMount() {
+	// 	window.history.scrollRestoration = "manual";
+	// }
+
 	render() {
 		const data = this.props.data[0];
 		return (

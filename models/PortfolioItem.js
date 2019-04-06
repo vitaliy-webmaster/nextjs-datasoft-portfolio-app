@@ -24,6 +24,8 @@ const portfolioItemSchema = new Schema({
 		required: true
 	},
 	endDate: Date
-}, { collection: "portfolioItems" });
+}, {
+	collection: "portfolioItems"
+});
 
 module.exports = mongoose.model("PortfolioItem", portfolioItemSchema);

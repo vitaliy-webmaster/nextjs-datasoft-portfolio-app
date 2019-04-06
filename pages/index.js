@@ -3,6 +3,7 @@ import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import PortfolioSection from "../components/PortfolioSection";
 import config from "../config";
+import { CSSTransition } from "react-transition-group";
 
 class Index extends Component {
 	static async getInitialProps() {
@@ -21,31 +22,41 @@ class Index extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="container">
-					<div className="agency">
-						<div className="agency-inner col-md-offset-1 col-md-4 col-sm-12">
-							<div className="row">
-								<img className="img-thumbnail" src="/static/images/my_photo.jpg"
-										 alt="My Photo" />
-							</div>
-						</div>
-						<div className="history-cite-box col-md-offset-1 col-md-5 col-sm-12">
-							<div className="row">
-								<div className="section-title">
-									<span>Обо мне</span>
+				<CSSTransition
+					in={true}
+					appear={true}
+					timeout={300}
+					unmountOnExit={true}
+					classNames="photo-box"
+				>
+					<div className="agency-container container">
+
+						<div className="agency">
+							<div className="agency-inner col-md-offset-1 col-md-4 col-sm-12">
+								<div className="row">
+									<img className="img-thumbnail" src="/static/images/my_photo.jpg"
+											 alt="My Photo" />
 								</div>
-								<p>
-									Приветствую!
-									<br /> Меня зовут Виталий, и я более 4 лет занимаюсь Full-Stack разработкой для WEB. <br />На
-									этой странице вы сможете ознакомиться с моими навыками и портфолио.
-								</p>
-								<Link href="/about">
-									<a className="btn grey animsition-link"><span>Читать далее<span className="" /></span></a>
-								</Link>
+							</div>
+							<div className="history-cite-box col-md-offset-1 col-md-5 col-sm-12">
+								<div className="row">
+									<div className="section-title">
+										<span>Обо мне</span>
+									</div>
+									<p>
+										Приветствую!
+										<br /> Меня зовут Виталий, и я более 4 лет занимаюсь Full-Stack разработкой для WEB. <br />На
+										этой странице вы сможете ознакомиться с моими навыками и портфолио.
+									</p>
+									<Link href="/about">
+										<a className="btn grey animsition-link"><span>Читать далее<span className="" /></span></a>
+									</Link>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</CSSTransition>
+
 
 				<section className="services">
 					<div className="container">

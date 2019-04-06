@@ -32,9 +32,9 @@ class Vegas extends Component {
 			delay: 12500,
 			transition: "fade",
 			slides: [
-				{ src: "/static/images/slider-img/img1.jpg" },
 				{ src: "/static/images/slider-img/img2.jpg" },
-				{ src: "/static/images/slider-img/img3.jpg" }
+				{ src: "/static/images/slider-img/img3.jpg" },
+				{ src: "/static/images/slider-img/img1.jpg" }
 			]
 		});
 	}

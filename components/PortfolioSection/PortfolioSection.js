@@ -4,26 +4,32 @@ import Link from "next/link";
 class PortfolioSection extends Component {
 
 	componentDidMount() {
-		// initialize isotope
-		var container = jQuery(".portfolio_container");
-		container.isotope({
-			filter: "*"
-		});
-
-		jQuery(".portfolio_filter a").click(function () {
+		const filterSaved = localStorage.getItem("filter");
+		setTimeout(() => {
+			// initialize isotope
+			var container = jQuery(".portfolio_container");
 			jQuery(".portfolio_filter .active").removeClass("active");
-			jQuery(this).addClass("active");
-
-			var selector = jQuery(this).attr("data-filter");
+			jQuery(".portfolio_filter a[data-filter='" + filterSaved + "']").addClass("active");
 			container.isotope({
-				filter: selector,
-				animationOptions: {
-					duration: 500,
-					animationEngine: "jquery"
-				}
+				filter: filterSaved || "*"
 			});
-			return false;
-		});
+
+			jQuery(".portfolio_filter a").click(function () {
+				jQuery(".portfolio_filter .active").removeClass("active");
+				jQuery(this).addClass("active");
+
+				var selector = jQuery(this).attr("data-filter");
+				localStorage.setItem("filter", selector);
+				container.isotope({
+					filter: selector,
+					animationOptions: {
+						duration: 800,
+						animationEngine: "jquery"
+					}
+				});
+				return false;
+			});
+		}, 0);
 	}
 
 	render() {
@@ -68,7 +74,9 @@ class PortfolioSection extends Component {
 									<ul className="portfolio_filter">
 										<li><a href="" className="active" data-filter="*">Все категории</a></li>
 										<li><a href="" data-filter=".category-landing">Landing Page</a></li>
-										<li><a href="" data-filter=".category-wordpress">WordPress</a></li>
+										<li><a href="" data-filter=".category-nodejs">Node.JS / Express</a></li>
+										<li><a href="" data-filter=".category-react">React / Next.JS</a></li>
+										<li><a href="" data-filter=".category-cms">WordPress / Drupal</a></li>
 									</ul>
 								</nav>
 							</div>
