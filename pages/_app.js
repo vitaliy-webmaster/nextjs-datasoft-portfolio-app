@@ -3,10 +3,12 @@ import App, { Container } from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
+import fetch from "isomorphic-unfetch";
 import { PageTransition } from "next-page-transitions";
 
 import "../static/styles/sass/main.scss";
 import Layout from "../components/Layout";
+import config from "../config";
 
 NProgress.doStart = NProgress.start;
 NProgress.doDone = NProgress.done;
@@ -27,36 +29,63 @@ NProgress.done = function () {
 	this.doDone();
 };
 
-Router.onRouteChangeStart = (url) => {
+Router.events.on("beforeHistoryChange", () => {
+	document.getElementById("portfolio-body").classList.add("scrollHeightLong");
+});
+
+Router.events.on("routeChangeStart", () => {
 	NProgress.configure({ trickle: false, showSpinner: false, delay: 300 }).start();
 	NProgress.start();
-};
+});
 
-Router.onRouteChangeComplete = () => {
+Router.events.on("routeChangeComplete", () => {
+	setTimeout(() => {
+		document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
+	}, 1500);
 	NProgress.done();
-};
+});
 
-Router.onRouteChangeError = () => {
+Router.events.on("routeChangeError", () => {
+	setTimeout(() => {
+		document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
+	}, 1500);
 	NProgress.done();
-};
+});
 
 class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
 		let pageProps = {};
+		const { HOST_URI } = config;
+		const isServer = ctx.req;
+		let data = isServer ? null : JSON.parse(localStorage.getItem("portfolioItems"));
+
+		if (!data) {
+			try {
+				const response = await fetch(`${HOST_URI}/api/portfolio-items`);
+				data = await response.json();
+				if (!isServer) localStorage.setItem("portfolioItems", JSON.stringify(data));
+				console.log("_app.js: Successfull fetching portfolio items" + Date.now());
+			} catch (err) {
+				console.log("_app.js: Error while fetching portfolio items");
+			}
+		}
 
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
 
-		return { pageProps, router };
+		return { pageProps, route: router.route, portfolioData: data };
 	}
 
-	componentDidMount() {
-		// window.history.scrollRestoration = "manual";
-	}
+
+	// componentDidMount() {
+	// 	if ("scrollRestoration" in window.history) {
+	// 		window.history.scrollRestoration = "manual";
+	// 	}
+	// }
 
 	render() {
-		const { Component, pageProps, router } = this.props;
+		const { Component, pageProps, route, portfolioData } = this.props;
 
 		return (
 			<Container>
@@ -64,25 +93,25 @@ class MyApp extends App {
 					<title>Datasoft Portfolio</title>
 				</Head>
 				<Layout>
-					<PageTransition timeout={300} classNames="page-transition">
-						<Component {...pageProps} key={router.route} />
+					<PageTransition timeout={400} classNames="page-transition">
+						<Component {...pageProps} portfolioData={portfolioData} key={route} />
 					</PageTransition>
 					<style jsx global>{`
-          .page-transition-enter {
-            opacity: 0;
-          }
-          .page-transition-enter-active {
-            opacity: 1;
-            transition: opacity 300ms;
-          }
-          .page-transition-exit {
-            opacity: 1;
-          }
-          .page-transition-exit-active {
-            opacity: 0;
-            transition: opacity 300ms;
-          }
-        `}</style>
+            .page-transition-enter {
+              opacity: 0;
+            }
+            .page-transition-enter-active {
+              opacity: 1;
+              transition: opacity 400ms;
+            }
+            .page-transition-exit {
+              opacity: 1;
+            }
+            .page-transition-exit-active {
+              opacity: 0;
+              transition: opacity 400ms;
+            }
+          `}</style>
 				</Layout>
 			</Container>
 		);

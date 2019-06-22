@@ -23,13 +23,13 @@ class PortfolioSection extends Component {
 				container.isotope({
 					filter: selector,
 					animationOptions: {
-						duration: 800,
+						duration: 1000,
 						animationEngine: "jquery"
 					}
 				});
 				return false;
 			});
-		}, 0);
+		}, 500);
 	}
 
 	render() {
