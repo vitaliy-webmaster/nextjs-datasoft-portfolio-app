@@ -1,12 +1,18 @@
 import React, { Component } from "react";
+import Footer from "../components/Footer";
 
 class About extends Component {
 	render() {
 		return (
-			<div className="under-development-title">
-				<img src="/static/images/warning.png" alt="" />
-				<p>На текущий момент страница находится в разработке.</p>
-			</div>
+			<React.Fragment>
+				<main>
+					<div className="under-development-title">
+						<img src="/static/images/warning.png" alt="" />
+						<p>На текущий момент страница находится в разработке.</p>
+					</div>
+				</main>
+				<Footer />
+			</React.Fragment>
 		);
 	}
 }

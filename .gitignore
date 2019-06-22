@@ -2,5 +2,6 @@ node_modules/
 .next/
 _next/
 .idea/
-dev.js
 .env
+*.log
+.DS_Store

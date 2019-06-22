@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CSSTransition } from "react-transition-group";
 
 class Form extends Component {
 
@@ -83,9 +84,17 @@ class Form extends Component {
 
 
 							{this.state.errors.length > 0 ? (
-								<div className="errors-box">
-									{errorsArr}
-								</div>
+								<CSSTransition
+									in={true}
+									appear={true}
+									timeout={300}
+									unmountOnExit={true}
+									classNames="form-errors"
+								>
+									<div className="errors-box">
+										{errorsArr}
+									</div>
+								</CSSTransition>
 							) : null}
 
 							{this.state.successMessage ? (

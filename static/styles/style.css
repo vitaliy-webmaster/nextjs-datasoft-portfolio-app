@@ -2,6 +2,10 @@
 /* Open sans font */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic-ext);
 
+#portfolio-body.scrollHeightLong {
+    height: 10000px;
+}
+
 /* ##### GENERAL  ##### */
 *, *:before, *:after {
     outline: 0;padding: 0;margin: 0;
@@ -737,7 +741,7 @@ footer.main-footer nav.footer-nav ul li a {
     width: 100%;
     position: relative;
     overflow: hidden;
-    transition: height 0.5s ease;
+    transition: height 0.6s ease;
 }
 
 .site-hero.vegas_bg .h1 {
@@ -1119,12 +1123,12 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .portfolio_container .single-work a {
+    min-height: 180px;
     width: 100%;
     border: 1px solid #ccc;
     -webkit-box-shadow: 1px 1px 1px 0px rgba(128, 255, 255, 0.5);
     -moz-box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.5);
     box-shadow: 1px 1px 2px 0px rgba(204, 204, 204, 1);
-
 }
 
 @media (max-width: 991px) {
@@ -2127,7 +2131,7 @@ footer input[type="submit"]:hover {
 
 .photo-box-appear.photo-box-appear-active {
     opacity: 1;
-    transition: opacity 300ms ease-in;
+    transition: opacity 300ms linear;
 }
 
 .photo-box-appear-done {
@@ -2140,5 +2144,27 @@ footer input[type="submit"]:hover {
 
 .photo-box-exit.photo-box-exit-active {
     opacity: 0;
-    transition: opacity 400ms ease-in;
+    transition: opacity 300ms linear;
+}
+
+.form-errors-appear {
+    opacity: 0;
+}
+
+.form-errors-appear.form-errors-appear-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.form-errors-appear-done {
+    opacity: 1;
+}
+
+.form-errors-exit {
+    opacity: 1;
+}
+
+.form-errors-exit.form-errors-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
 }

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const next = require("next");
 const mongoose = require("mongoose");
@@ -6,7 +8,6 @@ const compression = require("compression");
 const PortfolioItem = require("./models/PortfolioItem");
 const expressValidator = require("express-validator");
 
-require("dotenv").config();
 const PORT = parseInt(process.env.PORT, 10) || 7000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
