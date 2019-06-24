@@ -51,7 +51,8 @@ class Index extends Component {
 							<div className="row">
 								<div className="section-title">
 									<span className="white">Услуги</span>
-									<p className="white">Предлагаю услуги web-разработчика (Full-Stack) по следующим направлениям.</p>
+									<p className="white">Предлагаю услуги web-разработчика (Front-End, Back-End) по следующим
+										направлениям.</p>
 								</div>
 							</div>
 							<div className="services-bg row">
@@ -63,7 +64,7 @@ class Index extends Component {
 												<i className="icon ion-ios-infinite-outline" />
 												<span className="open-sans-text uppercase service-title">Aдаптивная вёрстка</span>
 												<ul>
-													<li>HTML5, CSS3, JQuery</li>
+													<li>HTML5, CSS3, JS, JQuery</li>
 													<li>Кроссбраузерность</li>
 													<li>Все размеры экранов</li>
 													<li>Flexbox, CSS3 Mediaqueries</li>
@@ -81,12 +82,12 @@ class Index extends Component {
 												<ul>
 													<li>Front-End на ReactJS</li>
 													<li>Redux, Redux-Thunk, Redux-Saga</li>
-													<li>Server-side rendering (NextJS)</li>
+													<li>React Context, Hooks, Suspense</li>
 													<li>React-Router, Redux Form и др.</li>
-													<li>CSS-in-JS, SASS, Animations</li>
-													<li>Unit Testing</li>
+													<li>Server-side rendering (NextJS)</li>
+													<li>Typescript, CSS-in-JS, Animations</li>
+													<li>Unit Testing (Jest, Enzyme)</li>
 													<li>ES6-ES8, REST, Firebase и др.</li>
-													<li>Подключ. дополн. библиотек</li>
 												</ul>
 											</div>
 										</div>
@@ -98,11 +99,13 @@ class Index extends Component {
 												<span className="open-sans-text uppercase service-title">NodeJS разработка</span>
 												<ul>
 													<li>Back-End на NodeJS</li>
-													<li>ExpressJS, Passport, и др.</li>
+													<li>Express, Passport и др.</li>
 													<li>Rest сервисы и GraphQL</li>
-													<li>Client Auth с cookies и JWT</li>
-													<li>MongoDB, PostgreSQL, Oracle</li>
+													<li>Typescript, ES6/ES7, Async/Await</li>
 													<li>Real-Time apps c WebSockets</li>
+													<li>Client Auth с cookies и JWT</li>
+													<li>MongoDB, PostgreSQL, MySQL</li>
+													<li>Тестирование REST</li>
 												</ul>
 											</div>
 										</div>
@@ -112,9 +115,13 @@ class Index extends Component {
 												<span className="open-sans-text uppercase service-title">Дополнительные навыки</span>
 												<ul>
 													<li>Object Oriented Programming</li>
-													<li>Angular 2+ на базовом уровне</li>
-													<li>Git, Webpack, Babel и др.</li>
+													<li>Angular 2+ (basic level)</li>
 													<li>English upper-intermediate</li>
+													<li>Webpack, Babel</li>
+													<li>Git / GitHub / Heroku</li>
+													<li>Command Line Tools</li>
+													<li>Слепой метод печати RUS/EN</li>
+													<li>Личный WEB-сервер (Ubuntu)</li>
 												</ul>
 											</div>
 										</div>

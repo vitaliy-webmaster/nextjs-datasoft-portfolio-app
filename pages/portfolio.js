@@ -6,7 +6,7 @@ class Portfolio extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<main>
+				<main className='portfolio-page'>
 					<PortfolioSection itemsData={this.props.portfolioData} />
 				</main>
 				<Footer />

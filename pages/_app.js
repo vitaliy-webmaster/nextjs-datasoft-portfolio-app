@@ -64,7 +64,7 @@ class MyApp extends App {
 				const response = await fetch(`${HOST_URI}/api/portfolio-items`);
 				data = await response.json();
 				if (!isServer) localStorage.setItem("portfolioItems", JSON.stringify(data));
-				console.log("_app.js: Successfull fetching portfolio items" + Date.now());
+				// console.log("_app.js: Successfull fetching portfolio items" + Date.now());
 			} catch (err) {
 				console.log("_app.js: Error while fetching portfolio items");
 			}
