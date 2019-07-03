@@ -29,9 +29,9 @@ NProgress.done = function () {
 	this.doDone();
 };
 
-Router.events.on("beforeHistoryChange", () => {
-	document.getElementById("portfolio-body").classList.add("scrollHeightLong");
-});
+// Router.events.on("beforeHistoryChange", () => {
+// 	document.getElementById("portfolio-body").classList.add("scrollHeightLong");
+// });
 
 Router.events.on("routeChangeStart", () => {
 	NProgress.configure({ trickle: false, showSpinner: false, delay: 300 }).start();
@@ -39,16 +39,16 @@ Router.events.on("routeChangeStart", () => {
 });
 
 Router.events.on("routeChangeComplete", () => {
-	setTimeout(() => {
-		document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
-	}, 1500);
+	// setTimeout(() => {
+	// 	document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
+	// }, 1500);
 	NProgress.done();
 });
 
 Router.events.on("routeChangeError", () => {
-	setTimeout(() => {
-		document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
-	}, 1500);
+	// setTimeout(() => {
+	// 	document.getElementById("portfolio-body").classList.remove("scrollHeightLong");
+	// }, 1500);
 	NProgress.done();
 });
 
@@ -83,6 +83,25 @@ class MyApp extends App {
 	// 		window.history.scrollRestoration = "manual";
 	// 	}
 	// }
+
+	componentDidMount() {
+		const cachedPageHeight = [];
+
+		Router.events.on("routeChangeStart", () => {
+			cachedPageHeight.push(document.documentElement.offsetHeight);
+		});
+
+		Router.events.on("routeChangeComplete", () => {
+			setTimeout(() => {
+				document.documentElement.style.height = "initial";
+			}, 1500);
+		});
+
+		Router.beforePopState(() => {
+			document.documentElement.style.height = `${cachedPageHeight.pop()}px`;
+			return true;
+		});
+	}
 
 	render() {
 		const { Component, pageProps, route, portfolioData } = this.props;

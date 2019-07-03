@@ -34,12 +34,18 @@ section {
 
 section.services {
     margin-top: -40px;
-    z-index: -10;
+    z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    section.services {
+        margin-top: 25px;
+    }
 }
 
 @media (max-width: 991px) {
     section.services {
-        margin-top: 50px;
+        margin-top: 20px;
     }
 }
 
@@ -747,6 +753,7 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .site-hero.vegas_bg .h1 {
+    min-width: 740px;
     position: absolute;
     color: rgb(230, 230, 230);
     text-transform: uppercase;
@@ -772,8 +779,40 @@ footer.main-footer nav.footer-nav ul li a {
     display: block;
 }
 
+@media (max-width: 991px) {
+    .site-hero.vegas_bg .h1 {
+        font: 32px 'Open Sans';
+    }
+
+    .site-hero.vegas_bg .h1 span {
+        font: 22px/44px 'Montserrat', sans-serif;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-hero.vegas_bg .h1 {
+        min-width: 420px;
+    }
+
+    .site-hero.vegas_bg .h1 {
+        font: 30px 'Open Sans';
+    }
+
+    .site-hero.vegas_bg .h1 span {
+        font: 20px/40px 'Montserrat', sans-serif;
+        margin-top: 5px;
+    }
+}
+
 .site-hero.vegas_bg.with-margin-top .h1 {
     top: 55%;
+}
+
+@media (max-width: 767px) {
+    .site-hero.vegas_bg.with-margin-top .h1 {
+        top: 200px;
+    }
 }
 
 .site-hero:after {
@@ -854,6 +893,8 @@ footer.main-footer nav.footer-nav ul li a {
 
 .agency-container {
     opacity: 0;
+    position: relative;
+    z-index: 5;
 }
 
 .agency {
@@ -863,12 +904,31 @@ footer.main-footer nav.footer-nav ul li a {
     margin-top: -300px;
 }
 
+@media (max-width: 1199px) {
+    .agency {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .agency {
+        margin-left: 0px;
+    }
+}
+
 .agency-inner {
 }
 
 .agency img {
     max-height: none;
     max-width: 400px;
+}
+
+@media (max-width: 767px) {
+    .agency img {
+        max-height: none;
+        max-width: 320px;
+    }
 }
 
 
@@ -895,6 +955,20 @@ footer.main-footer nav.footer-nav ul li a {
     overflow: hidden;
     padding: 20px 30px 20px 30px;
     text-align: left;
+}
+
+@media (max-width: 1199px) {
+    .category-bg .row {
+        left: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .category-bg .row {
+        left: 0px;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -925,17 +999,15 @@ footer.main-footer nav.footer-nav ul li a {
     color: #60606e;
     position: relative;
     z-index: 5;
-
 }
 
 @media (max-width: 991px) {
     .site-hero ul.slides {height: 750px;}
 
-    .agency {margin-top: -150px;}
-
+    /*.agency {margin-top: -150px;}*/
     .agency img {margin-bottom: 30px;}
 
-    .agency .section-title {margin: 0 auto;text-align: center;}
+    .agency .section-title {margin: 0 auto;text-align: left;}
 
     .agency .history-cite-box {
         color: #60606e;
@@ -944,30 +1016,44 @@ footer.main-footer nav.footer-nav ul li a {
 
     .agency p {
         color: #60606e;
-        background-color: transparent;
+        /* background-color: rgba(0, 0, 0, 0.15); */
+        background-color: rgba(21, 22, 25, 0.1);
         font-size: 17px;
         font-weight: 500;
-        padding: 14px 12px 15px 17px;
+        padding: 24px 22px 25px 27px;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
 
-        text-align: center;
-        /*-webkit-border-radius: 5px;
+        text-align: left;
+        -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        border-radius: 5px; */
+        border-radius: 5px;
     }
 
     .agency-inner {text-align: center;}
 
-    .category-bg { margin-bottom: 25px;}
+    .category-bg { margin-bottom: 10px;}
 
     .category-bg .row:after {width: 100%;}
 }
 
 @media (max-width: 767px) {
-    .agency {margin-top: -90px;}
+    .agency {margin-top: -160px;}
 
+    .agency .history-cite-box .row {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .agency .section-title {
+        text-align: center;
+    }
+
+    .agency .section-title span {
+        text-align: left;
+    }
 }
 
 
@@ -1041,6 +1127,10 @@ footer.main-footer nav.footer-nav ul li a {
     background: url(../images/main-services-bg.jpg) no-repeat #fff;
     background-size: cover;
     padding: 50px 50px 15px;
+}
+
+@media (max-width: 1279px) {
+    .services { padding: 50px 0;}
 }
 
 @media (max-width: 991px) {

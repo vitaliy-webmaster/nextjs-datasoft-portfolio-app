@@ -4,7 +4,7 @@ import { withRouter } from "next/router";
 class Vegas extends Component {
 
 	state = {
-		heroHeight: (this.props.router.pathname === "/") ? 750 : 480
+		heroHeight: (this.props.router.pathname === "/") ? 730 : 480
 	};
 
 
@@ -13,7 +13,7 @@ class Vegas extends Component {
 
 		if (this.props.router.pathname === "/" && bodyWidth >= 751) {
 			this.setState({
-				heroHeight: 750
+				heroHeight: 730
 			});
 		} else {
 			this.setState({
