@@ -21,20 +21,21 @@ class Index extends Component {
 						<div className="agency-container container">
 
 							<div className="agency">
-								<div className="agency-inner col-md-offset-1 col-md-4 col-sm-12">
+								<div
+									className="agency-inner  col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4 col-lg-offset-1">
 									<div className="row">
 										<img className="img-thumbnail" src="/static/images/my_photo.jpg"
 												 alt="My Photo" />
 									</div>
 								</div>
-								<div className="history-cite-box col-md-offset-1 col-md-5 col-sm-12">
+								<div className="history-cite-box col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-6 col-lg-5">
 									<div className="row">
 										<div className="section-title">
 											<span>Обо мне</span>
 										</div>
 										<p>
 											Приветствую!
-											<br /> Меня зовут Виталий, и я более 4 лет занимаюсь Full-Stack разработкой для WEB. <br />На
+											<br /> Меня зовут Виталий, и я более 4 лет занимаюсь Front-End разработкой для WEB. <br />На
 											этой странице вы сможете ознакомиться с моими навыками и портфолио.
 										</p>
 										<Link href="/about">
@@ -57,9 +58,10 @@ class Index extends Component {
 							</div>
 							<div className="services-bg row">
 								<div className="services-bg-overlay" />
-								<div className="col-md-12 col-md-offset-0 col-lg-8 col-sm-6 col-sm-offset-3 services-left wow fadeInUp">
+								<div
+									className="col-md-12 col-md-offset-0 col-lg-8 col-sm-12 col-sm-offset-0 services-left wow fadeInUp">
 									<div className="row">
-										<div className="category-bg col-md-6 col-sm-12">
+										<div className="category-bg col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-6 col-sm-6">
 											<div className="row">
 												<i className="icon ion-ios-infinite-outline" />
 												<span className="open-sans-text uppercase service-title">Aдаптивная вёрстка</span>
@@ -75,7 +77,7 @@ class Index extends Component {
 												</ul>
 											</div>
 										</div>
-										<div className="category-bg col-md-6 col-sm-12">
+										<div className="category-bg col-md-offset-0 col-md-5 col-lg-offset-0 col-lg-6 col-sm-6">
 											<div className="row">
 												<i className="icon ion-ios-shuffle" />
 												<span className="open-sans-text uppercase service-title">ReactJS разработка</span>
@@ -93,7 +95,7 @@ class Index extends Component {
 										</div>
 									</div>
 									<div className="row">
-										<div className="category-bg col-md-6 col-sm-12">
+										<div className="category-bg col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-6 col-sm-6">
 											<div className="row">
 												<i className="icon ion-ios-cart-outline" />
 												<span className="open-sans-text uppercase service-title">NodeJS разработка</span>
@@ -109,7 +111,7 @@ class Index extends Component {
 												</ul>
 											</div>
 										</div>
-										<div className="category-bg col-md-6 col-sm-12">
+										<div className="category-bg col-md-offset-0 col-md-5 col-lg-offset-0 col-lg-6 col-sm-6">
 											<div className="row">
 												<i className="icon ion-ios-settings" />
 												<span className="open-sans-text uppercase service-title">Дополнительные навыки</span>
