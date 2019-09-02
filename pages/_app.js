@@ -110,6 +110,7 @@ class MyApp extends App {
 			<Container>
 				<Head>
 					<title>Datasoft Portfolio</title>
+					<meta name='freelancehunt' content='02a429747d2d25a' />
 				</Head>
 				<Layout>
 					<PageTransition timeout={400} classNames="page-transition">
