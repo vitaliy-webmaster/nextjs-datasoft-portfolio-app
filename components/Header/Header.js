@@ -18,19 +18,19 @@ class Header extends Component {
 							<nav className="desktop-nav">
 								<ul id="menu-menu-1" className="first-level">
 									<li id="menu-item-13"
-											className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-13">
+										className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-13">
 										<Link href="/"><a>Главная</a></Link></li>
 									<li id="menu-item-55"
-											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
+										className="menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
 										<Link href="/about"><a>Обо мне</a></Link></li>
 									<li id="menu-item-56"
-											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
-										<Link href="/services"><a>Услуги</a></Link></li>
+										className="menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
+										<Link href="/services"><a>Навыки</a></Link></li>
 									<li id="menu-item-59"
-											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
+										className="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
 										<Link href="/portfolio"><a>Портфолио</a></Link></li>
 									<li id="menu-item-57"
-											className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
+										className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
 										<Link href="/contact"><a>Контакты</a></Link></li>
 								</ul>
 							</nav>

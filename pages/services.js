@@ -10,49 +10,41 @@ class Services extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="section-title">
-									<span>УСЛУГИ</span>
-									<p>Full-Stack WEB-разработка, настройка и поддержка.</p>
+									<span>НАВЫКИ</span>
+									<p>Full-Stack Web и Mobile разработка, настройка и поддержка.</p>
 								</div>
 							</div>
 
 							<div className="row">
 								<div className="col-md-6 about-one">
 									<h3>HTML5, CSS3, JavaScript + JQuery, Bootstrap 3(4), WordPress</h3>
-									<p>- верстка веб-страниц по вашему (готовому) psd-макету произвольного уровня сложности:</p>
-									<ul className='about-one-list'>
-										<li>сайт-визитка</li>
-										<li>landing page</li>
-										<li>новостные сайты, блоги</li>
-										<li>сайты услуг и т.д</li>
-									</ul>
-									<p>- код валидный, кроссбраузерный (IE9+) с применением новейших инструментов в отрасли; </p>
+									<p>- верстка веб-страниц произвольного уровня сложности:</p>
 									<p>- адаптивность под любые размеры экранов с помощью CSS3 Media Queries, FlexBox и Bootstrap 4(3)</p>
 									<p>- адаптация вашего лендинга под CMS WordPress с настройкой дополнительных плагинов и установкой на
 										хостинге, а также доработка существующих сайтов на CMS WordPress;</p>
 									<p>- использование WP REST API и клиентской авторизации с помощью cookies и JWT;</p>
-									<p>- дополнительные услуги: подключение аналитических сервисов (Google Analytics, Яндекс.Метрика),
+									<p>- подключение аналитических сервисов (Google Analytics, Яндекс.Метрика),
 										настройка хостинга и домена и т.д</p>
 								</div>
 
 								<div className="col-md-6 about-two">
-									<h3>ES6-ES8, Typescript, ReactJS, SSR (NextJS), NodeJS, REST, GraphQL, WebSockets, MongoDB</h3>
+									<h3>NodeJS, ES6-ES8, SSR (NextJS), ReactJS, Typescript, React-Native</h3>
 									<p>- ReactJS: создание виджетов и SPA приложений с использованием create-react-app, redux,
-										redux-thunk, redux-saga, react-router, redux-form, axios и других популярных npm пакетов; </p>
-									<p>- получение данных из сервера с помощью GraphQL (Apollo) либо REST API;</p>
-									<p>- поддержка синтаксиса ES6-ES8 и Typescript;</p>
-									<p>- React Context, Hooks, Suspense, Lazy Loading, HOC, Render Props;</p>
+										redux-thunk, redux-saga, react-router, redux-form, formik и др.; </p>
+									<p>- поддержка синтаксиса ES6-ES8 и Typescript, React Context, Hooks, Suspense, Lazy Loading и др.;</p>
 									<p>- NextJS: разработка Server-Side Rendering приложений React'a с целью SEO-оптимизации и ускорения
 										первичной загрузки страницы;</p>
-									<p>- Angular 2+: (basic level) создание SPA приложений с поддержкой встроенных пакетов angular/cli,
-										angular/router, angular/forms (template-driven и reactive), angular/common/http' и др.;
-										использование DI (Services), Lazy Loading, RxJS Observables;</p>
-									<p>- интеграция ReactJS и Angular 2+ приложений в ваш лендинг или CMS в виде виджетов или отдельных
+									<p>- интеграция ReactJS приложений в ваш лендинг или CMS в виде виджетов или отдельных
 										страниц;</p>
-									<p>- NodeJS: создание backend с использованием Express.js, REST, GraphQL (Apollo), Passport, Axios и
+									<p>- NodeJS: создание backend с использованием Express.js, REST, Passport, Axios и
 										других популярных пакетов; </p>
+									<p>- React-Native: разработка IOS и Android приложений созданных с помощью expo и react-native-cli;</p>
+									<p>- подключение Native Modules, использование React-Navigation для постраничной навигации, Geolocation API, Maps, Camera и др.;</p>
+									<p>- поддержка анимаций в React-Native с помощью Animated and LayoutAnimation API;</p>
+									<p>- сборка .apk и .ipa файлов, а также публикация приложений в AppStore;</p>
 									<p>- включение клиентской аутентификации с помощью cookies и JWT; создание real-time приложений
 										(чатов) с применением WebSockets (Socket.io);</p>
-									<p>- поддерживаемые базы данных: MongoDB (Mongoose), PostgreSQL, Oracle;</p>
+									<p>- поддерживаемые базы данных: MongoDB (Mongoose), PostgreSQL, MySQL, Oracle;</p>
 								</div>
 							</div>
 						</div>

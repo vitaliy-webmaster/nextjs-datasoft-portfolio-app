@@ -5,6 +5,8 @@ const next = require("next");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const compression = require("compression");
+const fetch = require('isomorphic-unfetch')
+
 const PortfolioItem = require("./models/PortfolioItem");
 const expressValidator = require("express-validator");
 
@@ -38,6 +40,19 @@ app.prepare().then(() => {
 
 	server.use(express.json());
 	server.use(expressValidator());
+
+	const checkServerStatus = (url, interval = 25) => {
+		const ms = interval * 60000;
+		setTimeout(() => {
+			try {
+				fetch(url).then(() => console.log(`[ ${new Date().toISOString()} ] Server status: ${url} is active`));
+			} catch (err) {
+				console.log(`Error fetching status of ${url}`);
+			} finally {
+				checkServerStatus(url, interval);
+			}
+		}, ms);
+	};
 
 	server.post("/api/message", (req, res) => {
 		req.sanitizeBody("name");
@@ -156,5 +171,6 @@ app.prepare().then(() => {
 	server.listen(PORT, err => {
 		if (err) throw err;
 		console.log("Server is ready on port: " + PORT);
+		checkServerStatus(config.HOST_URI, 25);
 	});
 });
