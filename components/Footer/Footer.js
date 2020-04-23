@@ -11,9 +11,9 @@ class Footer extends Component {
 					<div className="container">
 						<div className="col-md-5 col-sm-12 blue-section-text-box">
 							<div className="row">
-          <span className="white-text open-sans-text footer-header-text">
-            Есть предложения для сотрудничества? <br /> <br /> Отправьте мне сообщение - <br />и мы обязательно их обсудим.
-          </span>
+								<span className="white-text open-sans-text footer-header-text">
+									{ /* Есть предложения для сотрудничества? <br /> <br /> Отправьте мне сообщение - <br />и мы обязательно их обсудим. */}
+								</span>
 							</div>
 						</div>
 
@@ -41,7 +41,7 @@ class Footer extends Component {
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
 											<Link href="/about"><a className="animsition-link">Обо мне</a></Link></li>
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-56">
-											<Link href="/services"><a className="animsition-link">Услуги</a></Link></li>
+											<Link href="/services"><a className="animsition-link">Навыки</a></Link></li>
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-59">
 											<Link href="/portfolio"><a className="animsition-link">Портфолио</a></Link></li>
 										<li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">

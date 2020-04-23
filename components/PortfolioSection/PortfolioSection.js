@@ -41,8 +41,8 @@ class PortfolioSection extends Component {
 						<a className="portfolio_item work-grid wow fadeInUp animsition-link"
 						>
 							<img width="400" height="225"
-									 src={item.previewImg}
-									 className="attachment-400x225 size-400x225 wp-post-image" alt="" />
+								src={item.previewImg}
+								className="attachment-400x225 size-400x225 wp-post-image" alt="" />
 							<div className="portfolio_item_hover">
 								<div className="item_info">
 									<span>{item.title}</span>
@@ -76,6 +76,7 @@ class PortfolioSection extends Component {
 										<li><a href="" data-filter=".category-landing">Landing Page</a></li>
 										<li><a href="" data-filter=".category-nodejs">Node.JS / Express</a></li>
 										<li><a href="" data-filter=".category-react">React / Next.JS</a></li>
+										<li><a href="" data-filter=".category-mobile">React-Native / Mobile</a></li>
 										<li><a href="" data-filter=".category-cms">WordPress / Drupal</a></li>
 									</ul>
 								</nav>

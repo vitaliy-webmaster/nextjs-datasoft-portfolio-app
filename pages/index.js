@@ -25,7 +25,7 @@ class Index extends Component {
 									className="agency-inner  col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4 col-lg-offset-1">
 									<div className="row">
 										<img className="img-thumbnail" src="/static/images/my_photo.jpg"
-												 alt="My Photo" />
+											alt="My Photo" />
 									</div>
 								</div>
 								<div className="history-cite-box col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-6 col-lg-5">
@@ -51,9 +51,8 @@ class Index extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="section-title">
-									<span className="white">Услуги</span>
-									<p className="white">Предлагаю услуги web-разработчика (Front-End, Back-End) по следующим
-										направлениям.</p>
+									<span className="white">Навыки</span>
+									<p className="white">Мои навыки WEB-разработчика (Front-End, Back-End, Mobile).</p>
 								</div>
 							</div>
 							<div className="services-bg row">
@@ -84,8 +83,8 @@ class Index extends Component {
 												<ul>
 													<li>Front-End на ReactJS</li>
 													<li>Redux, Redux-Thunk, Redux-Saga</li>
-													<li>React Context, Hooks, Suspense</li>
-													<li>React-Router, Redux Form и др.</li>
+													<li>Router, Redux-Form, Formik</li>
+													<li>React Context, Hooks, Patterns</li>
 													<li>Server-side rendering (NextJS)</li>
 													<li>Typescript, CSS-in-JS, Animations</li>
 													<li>Unit Testing (Jest, Enzyme)</li>
@@ -102,7 +101,7 @@ class Index extends Component {
 												<ul>
 													<li>Back-End на NodeJS</li>
 													<li>Express, Passport и др.</li>
-													<li>Rest сервисы и GraphQL</li>
+													<li>Rest API communication </li>
 													<li>Typescript, ES6/ES7, Async/Await</li>
 													<li>Real-Time apps c WebSockets</li>
 													<li>Client Auth с cookies и JWT</li>
@@ -114,16 +113,16 @@ class Index extends Component {
 										<div className="category-bg col-md-offset-0 col-md-5 col-lg-offset-0 col-lg-6 col-sm-6">
 											<div className="row">
 												<i className="icon ion-ios-settings" />
-												<span className="open-sans-text uppercase service-title">Дополнительные навыки</span>
+												<span className="open-sans-text uppercase service-title">React-Native и другое</span>
 												<ul>
-													<li>Object Oriented Programming</li>
-													<li>Angular 2+ (basic level)</li>
-													<li>English upper-intermediate</li>
-													<li>Webpack, Babel</li>
+													<li>React-Native / Expo</li>
+													<li>Geolocation API, Maps, Camera</li>
+													<li>Animations & Gestures</li>
+													<li>AppStore publishing</li>
+													<li>Command Line, Webpack, Babel</li>
 													<li>Git / GitHub / Heroku</li>
-													<li>Command Line Tools</li>
+													<li>English Intermediate Level</li>
 													<li>Слепой метод печати RUS/EN</li>
-													<li>Личный WEB-сервер (Ubuntu)</li>
 												</ul>
 											</div>
 										</div>
@@ -133,7 +132,7 @@ class Index extends Component {
 								<div className="col-lg-4 visible-lg services-right wow fadeInUp">
 									<div className="row">
 										<img src="/static/images/web-development-medium.png"
-												 alt="Services Image" />
+											alt="Services Image" />
 									</div>
 								</div>
 

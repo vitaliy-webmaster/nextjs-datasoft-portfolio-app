@@ -6,6 +6,10 @@
     height: 10000px;
 }
 
+.vegas-wrapper {
+    background-color: rgba(0,0,0,0);
+}
+
 /* ##### GENERAL  ##### */
 *, *:before, *:after {
     outline: 0;padding: 0;margin: 0;
@@ -51,7 +55,7 @@ section.services {
 
 .blue-section {
     position: relative;
-    background: url(../images/main-feedback-bg.jpg) no-repeat #fff;
+    background: url(../images/main-feedback-bg.jpg) center center no-repeat #fff;
     background-size: cover;
     padding: 50px 50px;
     margin-top: 50px;
@@ -65,7 +69,7 @@ section.services {
 
 
 .blue-section-bg-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
     left: 0;
     position: absolute;
@@ -982,7 +986,7 @@ footer.main-footer nav.footer-nav ul li a {
 
 .category-bg .row:after {
     content: "";
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.7);
     left: 0;
     position: absolute;
     top: 0;
@@ -1146,7 +1150,7 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .services-bg-overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
     height: 100%;
     left: 0;
     position: absolute;
@@ -2147,6 +2151,21 @@ footer input[type="submit"]:hover {
     font-size: 22px;
     text-transform: uppercase;
     color: #60606e;
+}
+
+.post-single-portfolio-item .page-header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 25px auto;
+}
+
+.post-single-portfolio-item .page-category,
+.post-single-portfolio-item .single-item-description {
+    font-size: 16px;
+}
+
+.post-single-portfolio-item .single-item-description {
+    margin: 25px -15px 40px;
 }
 
 .page-contacts-section .contacts-box-left p span, .post-single-portfolio-item .single-item-description span {

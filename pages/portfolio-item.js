@@ -33,14 +33,14 @@ class PortfolioItem extends Component {
 							<div className="page-header">
 								<h1>{data.title}</h1>
 							</div>
-							<p>
-								<em>Category: <b>{data.category.split("-")[1].toUpperCase()}</b></em>
+							<p className="page-category">
+								Категория: <b>{data.category.split("-")[1].toUpperCase()}</b>
 							</p>
 							<hr />
-							<div className="col-md-3 single-item-description">
+							<div className="col-md-4 single-item-description">
 								<p dangerouslySetInnerHTML={{ __html: data.description }} />
 							</div>
-							<div className="col-md-offset-1 col-md-8 single-item-screenshot">
+							<div className="col-md-offset-1 col-md-7 single-item-screenshot">
 								{data.fullscreenImgs.map((item, index) => {
 									return (
 										<img key={index} src={item} alt="" />

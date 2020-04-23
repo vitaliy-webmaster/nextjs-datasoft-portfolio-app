@@ -32,9 +32,8 @@ class Vegas extends Component {
 			delay: 12500,
 			transition: "fade",
 			slides: [
-				{ src: "/static/images/slider-img/img2.jpg" },
-				{ src: "/static/images/slider-img/img3.jpg" },
-				{ src: "/static/images/slider-img/img1.jpg" }
+				{ src: "/static/images/slider-img/img1.jpg" },
+				{ src: "/static/images/slider-img/img2.jpg" }
 			]
 		});
 	}
@@ -48,7 +47,7 @@ class Vegas extends Component {
 	render() {
 		return (
 			<div className={`site-hero vegas_bg ${this.state.heroHeight === 480 ? "with-margin-top" : ""}`}
-					 style={{ height: this.state.heroHeight }}>
+				style={{ height: this.state.heroHeight }}>
 				<div className="h1">
 					WEB-программирование<br /> <span>Профессиональная Full-Stack разработка на NodeJS и React</span>
 				</div>
