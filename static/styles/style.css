@@ -55,7 +55,7 @@ section.services {
 
 .blue-section {
     position: relative;
-    background: url(../images/main-feedback-bg.jpg) center center no-repeat #fff;
+    background: url(../images/main-feedback-bg.jpg) center top no-repeat #fff;
     background-size: cover;
     padding: 50px 50px;
     margin-top: 50px;
@@ -778,9 +778,11 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .site-hero.vegas_bg .h1 span {
+    display: block;
+    margin: 0 auto;
+    max-width: 660px;
     font: 24px/48px 'Montserrat', sans-serif;
     font-weight: 300;
-    display: block;
 }
 
 @media (max-width: 991px) {
@@ -789,6 +791,7 @@ footer.main-footer nav.footer-nav ul li a {
     }
 
     .site-hero.vegas_bg .h1 span {
+        max-width: 630px;
         font: 22px/44px 'Montserrat', sans-serif;
         margin-top: 5px;
     }
@@ -986,7 +989,7 @@ footer.main-footer nav.footer-nav ul li a {
 
 .category-bg .row:after {
     content: "";
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     left: 0;
     position: absolute;
     top: 0;
@@ -996,7 +999,7 @@ footer.main-footer nav.footer-nav ul li a {
     -webkit-box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.5);
     -moz-box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.5);
     box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .category-bg i, .category-bg span, .category-bg ul li {
@@ -2085,13 +2088,13 @@ footer input[type="submit"]:hover {
     text-align: center;
 }
 
-.page-services-box .services-box-right img {
-    width: 100%;
-
-}
 
 .page-services-box .services-box-left ul.list li:before {
     color: #7E95F2;
+}
+
+.page-contacts-section .services-box-right {
+    margin-top: 50px;
 }
 
 .section-my-advantages {
@@ -2102,6 +2105,16 @@ footer input[type="submit"]:hover {
     margin-bottom: 50px;
     line-height: 1.4em;
 
+}
+
+.contacts-email {
+    margin-left: 25px;
+}
+
+@media (max-width: 1199px) {
+    .page-contacts-section .services-box-right {
+        margin-top: 75px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -2331,12 +2344,12 @@ footer input[type="submit"]:hover {
 
 .grey-box-icon {
     background: #f6f6f6;
-    padding: 50px 20px 20px;
+    padding: 50px 15px 15px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
     position: relative;
-    height: 185px;
+    height: 170px;
     -webkit-box-shadow: 2px 2px 4px 0 #ccc;
     -moz-box-shadow: 2px 2px 4px 0 #ccc;
     box-shadow: 2px 2px 4px 0 #ccc;
@@ -2347,7 +2360,7 @@ footer input[type="submit"]:hover {
 
 @media (max-width: 1199px) {
     .grey-box-icon {
-        height: 220px;
+        height: 190px;
     }
 }
 
@@ -2425,4 +2438,51 @@ footer input[type="submit"]:hover {
     line-height: 18px;
     color: #646464;
     margin: 0;
+}
+
+@media (max-width: 991px) {
+    .grey-box-icon {
+        height: 170px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grey-box-icon {
+        max-width: 320px;
+        margin: 0 auto 50px;
+    }
+    .container.utp-box > .row > div:last-child > .grey-box-icon {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 460px) {
+
+    header.main-header .logo .h1 {
+        font-size: 28px;
+    }
+
+    .site-hero.vegas_bg .h1 {
+        font: 26px 'Open Sans';
+    }
+
+    .site-hero.vegas_bg .h1 span {
+        max-width: 630px;
+        font: 18px/30px 'Montserrat', sans-serif;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 420px) {
+    .site-hero.vegas_bg .h1 {
+        font: 23px 'Open Sans';
+    }
+
+    .site-hero.vegas_bg .h1 span {
+        max-width: auto;
+        font: 16px/30px 'Montserrat', sans-serif;
+        margin-top: 5px;
+    }
 }

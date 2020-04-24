@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
+import UTPBox from "../components/UTPBox";
 
 class Services extends Component {
 	render() {
@@ -28,61 +29,29 @@ class Services extends Component {
 								</div>
 
 								<div className="col-md-6 about-two">
-									<h3>NodeJS, ES6-ES8, SSR (NextJS), ReactJS, Typescript, React-Native</h3>
-									<p>- ReactJS: создание виджетов и SPA приложений с использованием create-react-app, redux,
+									<h3>ES6-ES8, NodeJS, ReactJS, SSR (NextJS), React-Native, Typescript</h3>
+									<p>- <strong>NodeJS:</strong> создание backend с использованием Express.js, REST, Passport, Axios и
+										других популярных пакетов; </p>
+									<p>- настройка клиентской аутентификации с помощью cookies и JWT; создание real-time приложений
+										(чатов) с применением WebSockets (Socket.io);</p>
+									<p>- поддерживаемые базы данных: MongoDB (Mongoose), PostgreSQL, MySQL, Oracle;</p>
+									<p>- <strong>ReactJS:</strong> создание виджетов и SPA приложений с использованием create-react-app, redux,
 										redux-thunk, redux-saga, react-router, redux-form, formik и др.; </p>
 									<p>- поддержка синтаксиса ES6-ES8 и Typescript, React Context, Hooks, Suspense, Lazy Loading и др.;</p>
-									<p>- NextJS: разработка Server-Side Rendering приложений React'a с целью SEO-оптимизации и ускорения
+									<p>- <strong>NextJS:</strong> разработка Server-Side Rendering приложений React'a с целью SEO-оптимизации и ускорения
 										первичной загрузки страницы;</p>
 									<p>- интеграция ReactJS приложений в ваш лендинг или CMS в виде виджетов или отдельных
 										страниц;</p>
-									<p>- NodeJS: создание backend с использованием Express.js, REST, Passport, Axios и
-										других популярных пакетов; </p>
-									<p>- React-Native: разработка IOS и Android приложений созданных с помощью expo и react-native-cli;</p>
+									<p>- <strong>React-Native:</strong> разработка IOS и Android приложений созданных с помощью expo и react-native-cli;</p>
 									<p>- подключение Native Modules, использование React-Navigation для постраничной навигации, Geolocation API, Maps, Camera и др.;</p>
 									<p>- поддержка анимаций в React-Native с помощью Animated and LayoutAnimation API;</p>
 									<p>- сборка .apk и .ipa файлов, а также публикация приложений в AppStore;</p>
-									<p>- включение клиентской аутентификации с помощью cookies и JWT; создание real-time приложений
-										(чатов) с применением WebSockets (Socket.io);</p>
-									<p>- поддерживаемые базы данных: MongoDB (Mongoose), PostgreSQL, MySQL, Oracle;</p>
 								</div>
 							</div>
 						</div>
 					</section>
 
-					<section className="container utp-box white">
-						<div className="row">
-							<div className="col-sm-6 col-md-3">
-								<div className="grey-box-icon">
-									<div className="icon-box-top grey-box-icon-pos"><i
-										className="fa medium circle-white center icon-results"></i></div>
-									<h4>Результат</h4>
-									<p>Чистый, валидный код, соответствующий последним web-стандартам.</p></div>
-							</div>
-							<div className="col-sm-6 col-md-3">
-								<div className="grey-box-icon">
-									<div className="icon-box-top grey-box-icon-pos"><i
-										className="fa medium circle-white center icon-responsibility"></i></div>
-									<h4>Ответственность</h4>
-									<p>Я требователен к себе плане проработки всех деталей проекта.</p></div>
-							</div>
-							<div className="col-sm-6 col-md-3">
-								<div className="grey-box-icon">
-									<div className="icon-box-top grey-box-icon-pos"><i
-										className="fa medium circle-white center icon-payment"></i></div>
-									<h4>Послеоплата</h4>
-									<p>Для большинства проектов я выбираю схему оплаты по факту выполненой работы.</p></div>
-							</div>
-							<div className="col-sm-6 col-md-3">
-								<div className="grey-box-icon">
-									<div className="icon-box-top grey-box-icon-pos"><i
-										className="fa medium circle-white center icon-support"></i></div>
-									<h4>Поддержка</h4>
-									<p>Провожу небольшие правки по завершенным проектам ещё в течении 2 недель.</p>
-								</div>
-							</div>
-						</div>
-					</section>
+					<UTPBox />
 				</main>
 				<Footer />
 			</React.Fragment>
