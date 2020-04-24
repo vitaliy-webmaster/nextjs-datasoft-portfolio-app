@@ -11,14 +11,26 @@ class Vegas extends Component {
 	setHeroHeight = () => {
 		const bodyWidth = document.getElementById("portfolio-body").offsetWidth;
 
-		if (this.props.router.pathname === "/" && bodyWidth >= 751) {
-			this.setState({
-				heroHeight: 730
-			});
+		if (this.props.router.pathname === "/") {
+			if (bodyWidth >= 751) {
+				this.setState({
+					heroHeight: 730
+				});
+			} else {
+				this.setState({
+					heroHeight: 480
+				});
+			}
 		} else {
-			this.setState({
-				heroHeight: 480
-			});
+			if (bodyWidth >= 751) {
+				this.setState({
+					heroHeight: 480
+				});
+			} else {
+				this.setState({
+					heroHeight: 360
+				});
+			}
 		}
 	};
 
@@ -46,7 +58,7 @@ class Vegas extends Component {
 
 	render() {
 		return (
-			<div className={`site-hero vegas_bg ${this.state.heroHeight === 480 ? "with-margin-top" : ""}`}
+			<div className={`site-hero vegas_bg ${[360, 480].includes(this.state.heroHeight) ? "with-margin-top" : ""}`}
 				style={{ height: this.state.heroHeight }}>
 				<div className="h1">
 					WEB-программирование<br /> <span>Профессиональная Full-Stack разработка на NodeJS и React</span>
