@@ -116,12 +116,12 @@ class Index extends Component {
 												<span className="open-sans-text uppercase service-title">React-Native и другое</span>
 												<ul>
 													<li>React-Native / Expo</li>
-													<li>Geolocation API, Maps, Camera</li>
+													<li>Geolocation, Maps, Camera</li>
 													<li>Animations & Gestures</li>
 													<li>AppStore publishing</li>
-													<li>Command Line, Webpack, Babel</li>
-													<li>Git / GitHub / Heroku</li>
-													<li>English Intermediate Level</li>
+													<li>Gulp, Webpack, Babel</li>
+													<li>Git, GitHub, Heroku</li>
+													<li>English Intermediate</li>
 													<li>Слепой метод печати RUS/EN</li>
 												</ul>
 											</div>
