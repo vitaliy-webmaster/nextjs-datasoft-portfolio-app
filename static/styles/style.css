@@ -105,7 +105,7 @@ section.services {
 
 .blue-section .white-section .error, .blue-section .white-section .success {
     font-family: "Montserrat", sans-serif;
-    color: yellow;
+    color: #fff;
     line-height: 24px;
     font-size: 16px;
     font-weight: 400;
@@ -2177,6 +2177,16 @@ footer input[type="submit"]:hover {
     font-size: 16px;
 }
 
+.post-single-portfolio-item .page-category .demo-preview-link a {
+    color: #1192d3;
+}
+
+.post-single-portfolio-item .page-category .demo-preview-link a:active,
+.post-single-portfolio-item .page-category .demo-preview-link a:hover,
+.post-single-portfolio-item .page-category .demo-preview-link a:focus {
+    color: #337ab7;
+}
+
 .post-single-portfolio-item .single-item-description {
     margin: 25px -15px 40px;
 }
@@ -2199,6 +2209,7 @@ footer input[type="submit"]:hover {
     width: 100%;
     max-width: 800px;
     height: auto;
+    margin-top: 25px;
     -webkit-box-shadow: 1px 1px 5px 0px rgba(27, 27, 27, 0.75);
     -moz-box-shadow: 1px 1px 5px 0px rgba(27, 27, 27, 0.75);
     box-shadow: 1px 1px 5px 0px rgba(27, 27, 27, 0.75);
@@ -2447,6 +2458,20 @@ footer input[type="submit"]:hover {
         padding-right: 25px;
     }
 }
+
+@media (max-width: 799px) {
+    .post-single-portfolio-item .page-header,
+    .post-single-portfolio-item .page-category {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .post-single-portfolio-item .single-item-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 @media (max-width: 767px) {
     .grey-box-icon {

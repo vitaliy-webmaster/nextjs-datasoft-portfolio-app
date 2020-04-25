@@ -74,7 +74,7 @@ class PortfolioSection extends Component {
 									<ul className="portfolio_filter">
 										<li><a href="" className="active" data-filter="*">Все категории</a></li>
 										<li><a href="" data-filter=".category-landing">Landing Page</a></li>
-										<li><a href="" data-filter=".category-nodejs">Node.JS / Express</a></li>
+										{/* <li><a href="" data-filter=".category-nodejs">Node.JS / Express</a></li> */}
 										<li><a href="" data-filter=".category-react">React / Next.JS</a></li>
 										<li><a href="" data-filter=".category-mobile">React-Native / Mobile</a></li>
 										<li><a href="" data-filter=".category-cms">WordPress / Drupal</a></li>

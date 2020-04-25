@@ -35,6 +35,12 @@ class PortfolioItem extends Component {
 							</div>
 							<p className="page-category">
 								Категория: <b>{data.category.split("-")[1].toUpperCase()}</b>
+								<br />
+								{data.demoUrl && (
+									<span>
+										Демо превью: <b className="demo-preview-link"><a target="_blank" href={data.demoUrl}>{data.demoUrl}</a></b>
+									</span>
+								)}
 							</p>
 							<hr />
 							<div className="col-md-4 single-item-description">
