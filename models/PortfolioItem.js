@@ -17,6 +17,9 @@ const portfolioItemSchema = new Schema({
 	websiteUrl: {
 		type: String
 	},
+	demoUrl: {
+		type: String
+	},
 	previewImg: String,
 	fullscreenImgs: [String],
 	description: {
