@@ -1,6 +1,18 @@
-// next.config.js
-const withCSS = require("@zeit/next-css");
-const withSASS = require("@zeit/next-sass");
-
-
-module.exports = withCSS(withSASS());
+module.exports = {
+  experimental: {
+    scrollRestoration: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/(fonts|images|js|styles)/:path*',
+        headers: [
+          {
+            key: 'cache-control',
+            value: 'public, max-age=172800',
+          },
+        ],
+      },
+    ];
+  },
+};

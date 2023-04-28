@@ -1,41 +1,44 @@
 {
-  "name": "next-datasoft-portfolio-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "dev": "nodemon server.js",
-    "build": "cross-env NODE_ENV=production next build",
-    "start": "cross-env NODE_ENV=production node server.js",
-    "heroku-postbuild": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "npm run prettier && npm run stylelint && npm run eslint && npm run jest",
+    "eslint": "eslint \"./src/**/**.{js,jsx,ts,tsx}\" --cache --cache-location .cache/.eslintcache",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prettier": "prettier \"./{src,public}/**/*.{js,jsx,ts,tsx,css,scss,json}\" --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "stylelint": "stylelint \"./public/styles/*.css\""
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
-    "compression": "^1.7.4",
-    "dotenv": "^7.0.0",
-    "express": "^4.17.1",
-    "express-validator": "^5.3.1",
-    "helmet": "^3.18.0",
-    "isomorphic-unfetch": "^3.0.0",
-    "mongoose": "^5.6.2",
-    "next": "^8.1.0",
+    "next": "latest",
     "next-page-transitions": "^1.0.0-beta.2",
-    "node-sass": "^4.12.0",
-    "nodemailer": "^6.2.1",
     "nprogress": "^0.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-transition-group": "^2.9.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "@types/jquery": "^3.5.16",
+    "@types/node": "18.16.2",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.0.7",
+    "@types/react-transition-group": "^4.4.5",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "8.22.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.4",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard": "^32.0.0",
+    "typescript": "^4.8.4"
   },
-  "engines": {
-    "node": "11.12.0",
-    "npm": "6.7.0"
-  }
+  "pre-commit": [
+    "eslint",
+    "prettier"
+  ]
 }

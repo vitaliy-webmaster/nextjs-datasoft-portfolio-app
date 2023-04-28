@@ -1,0 +1,36 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+package-lock.json
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# cache
+/.cache
+
+# minimized
+*.min.js
+*.min.jsx
+*.min.ts
+*.min.tsx
+*.min.css
+*.min.scss
