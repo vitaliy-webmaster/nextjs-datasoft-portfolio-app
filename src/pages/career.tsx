@@ -32,7 +32,10 @@ const Career: NextPage = () => {
                 industries I strongly determined my desire to pursue a career as a full-time web
                 developer. My focus in web development had been on technologies such as{' '}
                 <strong>HTML/CSS, JavaScript, NodeJS, and React</strong> which I decided to focus
-                on. Thereafter, <strong>from 2018 to 2020</strong> I worked as a{' '}
+                on. At first I took the job at <strong>Glavcomp Repair Service</strong> company.
+                There I worked within a small team of developers. We had created UI for numerous
+                websites that advertised computer repair services on behalf of our client.
+                Thereafter, <strong>from 2018 to 2020</strong> I worked as a{' '}
                 <strong>full-stack freelance developer</strong> and finished{' '}
                 <strong>up to 15 small to medium sized projects</strong>. This experience has
                 allowed me to ensure a deep understanding of best practices and to stay current with

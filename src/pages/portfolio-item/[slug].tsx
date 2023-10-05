@@ -107,13 +107,10 @@ export async function getStaticPaths() {
     };
   }
 
-  console.log('data', data);
-
-  // const paths =
-  // [{ params: { product: '1' } }, { params: { product: '2' } }]
+  const paths = data.map((item: any) => ({ params: { slug: item.portfolioUrl } }));
 
   return {
-    paths: [],
+    paths,
     fallback: false,
   };
 }

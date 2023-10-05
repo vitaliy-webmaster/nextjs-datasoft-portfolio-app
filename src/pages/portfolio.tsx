@@ -21,7 +21,7 @@ const Portfolio: NextPage<PortfolioProps> = ({ portfolioData }) => {
   );
 };
 
-export const getServerSideProps: GetStaticProps<PortfolioProps> = async () => {
+export const getStaticProps: GetStaticProps<PortfolioProps> = async () => {
   let data: any = {};
 
   try {

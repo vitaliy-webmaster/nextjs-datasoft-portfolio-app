@@ -47,11 +47,10 @@ const Main: NextPage<MainProps> = ({ portfolioData }) => {
                     <span>About me</span>
                   </div>
                   <p>
-                    Hi there!
-                    <br /> I'm Vitaliy, passionate web programmer with over 4 years front-end
-                    development experience.
-                    <br /> On this website I want to tell you about my career story. So, jump in and
-                    let's get started...
+                    Hello!
+                    <br /> I'm Vitaliy, passionate web programmer with more than 3 years of
+                    experience as a React Javascript Developer.
+                    <br /> On this website I want to tell you about my career story.
                   </p>
                   <Link className="btn grey animsition-link" href="/career">
                     <span>
@@ -161,7 +160,7 @@ const Main: NextPage<MainProps> = ({ portfolioData }) => {
   );
 };
 
-export const getServerSideProps: GetStaticProps<MainProps> = async () => {
+export const getStaticProps: GetStaticProps<MainProps> = async () => {
   let data: any = {};
 
   try {
